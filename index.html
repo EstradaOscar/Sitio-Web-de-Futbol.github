@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" href="../images/imagen.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="../images/imagen-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="../images/imagen-32x32.png" type="image/png">
+    <link rel="icon" sizes="48x48" href="../images/imagen-48x48.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo sobre Deporte</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css"> <!-- Ajustar ruta si es necesario -->
+    <style>
+        .ball {
+            position: absolute;
+            border-radius: 50%;
+            background-color: #38a169;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <header class="bg-green-500 text-white p-4 text-center">
+        <h1 class="text-3xl">Todo sobre Deporte</h1>
+    </header>
+    <nav class="p-4 text-center">
+        <ul class="flex justify-center space-x-4">
+            <li><a href="index.html" class="text-green-700">Inicio</a></li>
+            <li><a href="views/tematica.html" class="text-green-700">Temática</a></li>
+            <li><a href="views/acercade.html" class="text-green-700">Acerca de</a></li>
+            <li><a href="views/contacto.html" class="text-green-700">Contacto</a></li>
+            <li><a href="views/media.html" class="text-green-700">Imágenes y video</a></li>
+        </ul>
+    </nav>
+    <main class="p-4">
+        <section>
+            <div class="bg-blue-300 p-6 rounded-lg">
+                <h2 class="text-2xl">Bienvenido</h2>
+                <p>Descubre todo sobre los deportes, desde los más populares hasta los menos conocidos.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                <div class="card bg-white p-4 rounded-lg shadow">
+                    <h3 class="text-xl font-bold">Fútbol</h3>
+                    <p>El fútbol es el deporte más popular del mundo, conocido por su emoción y pasión.</p>
+                </div>
+                <div class="card bg-white p-4 rounded-lg shadow">
+                    <h3 class="text-xl font-bold">Baloncesto</h3>
+                    <p>El baloncesto es un deporte dinámico que se juega en equipos de cinco jugadores.</p>
+                </div>
+                <div class="card bg-white p-4 rounded-lg shadow">
+                    <h3 class="text-xl font-bold">Tenis</h3>
+                    <p>El tenis es un deporte individual o en parejas que se juega en una cancha rectangular.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-green-500 text-white p-4 text-center">
+        <p>&copy; 2024 Todo sobre Deporte</p>
+    </footer>
+
+    <script>
+        function createBalls() {
+            for (let i = 0; i < 10; i++) {
+                const ball = document.createElement('div');
+                ball.className = 'ball';
+                ball.style.width = '20px';
+                ball.style.height = '20px';
+                ball.style.left = Math.random() * window.innerWidth + 'px';
+                ball.style.top = Math.random() * window.innerHeight + 'px';
+                document.body.appendChild(ball);
+
+                // Animación de desaparición
+                setTimeout(() => {
+                    ball.style.transition = 'opacity 0.5s';
+                    ball.style.opacity = '0';
+                }, 1000);
+
+                // Eliminar la pelota después de la animación
+                setTimeout(() => {
+                    ball.remove();
+                }, 1500);
+            }
+        }
+
+        // Llama a createBalls al cargar la página
+        window.onload = createBalls;
+    </script>
+</body>
+</html>
