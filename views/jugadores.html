@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="icon" href="../images/imagen.ico" type="image/x-icon"> <!-- Aquí se coloca el ícono -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Todo sobre Deporte - Jugadores Icónicos
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .ball {
+            position: absolute;
+            border-radius: 50%;
+            background-color: #38a169; /* Color verde */
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-green-500 text-white p-4 text-center">
+        <h1 class="text-3xl">Todo sobre Deporte</h1>
+        <h2>Jugadores Icónicos</h2>
+    </header>
+    <nav class="p-4">
+        <ul class="flex justify-center space-x-4">
+            <li><a href="../index.html" class="text-green-700 hover:underline">Inicio</a></li>
+            <li><a href="tematica.html" class="text-green-700 hover:underline">Temática</a></li>
+            <li><a href="acercade.html" class="text-green-700 hover:underline">Acerca de</a></li>
+            <li><a href="contacto.html" class="text-green-700 hover:underline">Contacto</a></li>
+            <li><a href="jugadores.html" class="text-green-700 font-bold">Jugadores Icónicos</a></li>
+            <li><a href="media.html" class="text-green-700 hover:underline">Imágenes y videos</a></li>
+        </ul>
+    </nav>
+    <main class="flex flex-col items-center p-4">
+        <section class="mb-6 bg-blue-100 p-4 rounded w-full max-w-md">
+            <h2 class="text-2xl font-bold text-center">Fútbol</h2>
+            <ul class="list-disc pl-5">
+                <li><strong>Pelé:</strong> Ganador de tres Copas Mundiales con Brasil.</li>
+                <li><strong>Diego Maradona:</strong> Lideró a Argentina en la victoria de la Copa del Mundo de 1986.</li>
+                <li><strong>Lionel Messi y Cristiano Ronaldo:</strong> Considerados los mejores jugadores de la era moderna.</li>
+            </ul>
+        </section>
+
+        <section class="mb-6 bg-blue-100 p-4 rounded w-full max-w-md">
+            <h2 class="text-2xl font-bold text-center">Baloncesto</h2>
+            <ul class="list-disc pl-5">
+                <li><strong>Michael Jordan:</strong> Considerado el mejor jugador de todos los tiempos, con seis campeonatos de la NBA.</li>
+                <li><strong>LeBron James:</strong> Uno de los jugadores más dominantes en la actualidad.</li>
+                <li><strong>Kobe Bryant:</strong> Reconocido por su ética de trabajo y cinco campeonatos con Los Ángeles Lakers.</li>
+            </ul>
+        </section>
+
+        <section class="bg-blue-100 p-4 rounded w-full max-w-md">
+            <h2 class="text-2xl font-bold text-center">Tenis</h2>
+            <ul class="list-disc pl-5">
+                <li><strong>Roger Federer:</strong> Ganador de 20 títulos de Grand Slam, considerado uno de los mejores de la historia.</li>
+                <li><strong>Rafael Nadal:</strong> Especialista en tierra batida, con múltiples títulos en Roland Garros.</li>
+                <li><strong>Serena Williams:</strong> Poseedora de 23 títulos de Grand Slam, una de las mejores jugadoras de todos los tiempos.</li>
+            </ul>
+        </section>
+    </main>
+    <footer class="bg-green-500 text-white p-4 text-center">
+        <p>&copy; 2024 Todo sobre Deporte</p>
+    </footer>
+</body>
+</html>
