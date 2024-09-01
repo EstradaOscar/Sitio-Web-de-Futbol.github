@@ -1,9 +1,11 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <link rel="icon" href="../images/imagen.ico" type="image/x-icon"> <!-- Aquí se coloca el ícono -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora la temática de deportes como fútbol, tenis y baloncesto en Todo sobre Deporte.">
     <title>Todo sobre Deporte - Temática de Fútbol, Tenis y Baloncesto</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -11,16 +13,15 @@
 <body class="bg-gray-100">
     <header class="bg-green-500 text-white p-4 text-center">
         <h1 class="text-3xl">Todo sobre Deporte</h1>
-        <h2>Tematica</h2>
+        <h2>Temática</h2>
     </header>
-    <nav class="p-4 text-center">
+    <nav class="p-4 text-center" role="navigation">
         <ul class="flex justify-center space-x-4">
-            <li><a href="../index.html" class="text-green-700">Inicio</a></li>
-            <li><a href="tematica.html" class="text-green-700">Temática</a></li>
-            <li><a href="acercade.html" class="text-green-700">Acerca de</a></li>
-            <li><a href="contacto.html" class="text-green-700">Contacto</a></li>
-            <li><a href="media.html" class="text-green-700"> Imagenes y video</a></li>
-
+            <li><a href="../index.html" class="text-green-700 hover:underline">Inicio</a></li>
+            <li><a href="tematica.html" class="text-green-700 font-bold">Temática</a></li>
+            <li><a href="acercade.html" class="text-green-700 hover:underline">Acerca de</a></li>
+            <li><a href="contacto.html" class="text-green-700 hover:underline">Contacto</a></li>
+            <li><a href="media.html" class="text-green-700 hover:underline">Imágenes y videos</a></li>
         </ul>
     </nav>
     <main class="flex justify-center p-4">
@@ -32,26 +33,78 @@
                 <h2 class="text-2xl font-semibold">Fútbol</h2>
                 <p>El fútbol es uno de los deportes más populares del mundo, conocido por su dinamismo y pasión. Se juega entre dos equipos de once jugadores cada uno, con el objetivo de marcar más goles que el rival.</p>
                 <h3 class="text-xl font-semibold mt-4">Reglas Básicas</h3>
-                <p>El juego se desarrolla en dos tiempos de 45 minutos. Los jugadores no pueden usar las manos, excepto el portero. El equipo que anote más goles al final del partido es el ganador.</p>
+                <table class="min-w-full mt-4 bg-white border border-gray-300">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="border px-4 py-2">Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border px-4 py-2">El juego se desarrolla en dos tiempos de 45 minutos.</td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">Los jugadores no pueden usar las manos, excepto el portero.</td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">El equipo que anote más goles al final del partido es el ganador.</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
             <div class="mt-6 bg-blue-100 p-4 rounded-lg shadow-md">
                 <h2 class="text-2xl font-semibold">Tenis</h2>
                 <p>El tenis es un deporte que se juega individualmente o en parejas, donde los jugadores golpean una pelota con una raqueta para pasarla por encima de una red y dentro de los límites del campo del oponente.</p>
                 <h3 class="text-xl font-semibold mt-4">Reglas Básicas</h3>
-                <p>Los partidos se juegan en sets, y el primero en ganar un número determinado de sets (generalmente 2 o 3) es el ganador. Los puntos se cuentan como 15, 30, 40 y juego.</p>
+                <table class="min-w-full mt-4 bg-white border border-gray-300">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="border px-4 py-2">Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border px-4 py-2">Los partidos se juegan en sets, y el primero en ganar un número determinado de sets (generalmente 2 o 3) es el ganador.</td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">Los puntos se cuentan como 15, 30, 40 y juego.</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
             <div class="mt-6 bg-blue-100 p-4 rounded-lg shadow-md">
                 <h2 class="text-2xl font-semibold">Baloncesto</h2>
                 <p>El baloncesto es un deporte de equipo en el que dos equipos de cinco jugadores cada uno intentan anotar puntos lanzando una pelota a través del aro del equipo contrario.</p>
                 <h3 class="text-xl font-semibold mt-4">Reglas Básicas</h3>
-                <p>El juego se divide en cuatro cuartos de 12 minutos cada uno. Los puntos se anotan al encestar la pelota en el aro, con diferentes valores según la distancia del tiro.</p>
+                <table class="min-w-full mt-4 bg-white border border-gray-300">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="border px-4 py-2">Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border px-4 py-2">El juego se divide en cuatro cuartos de 12 minutos cada uno.</td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">Los puntos se anotan al encestar la pelota en el aro, con diferentes valores según la distancia del tiro.</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>
     <footer class="bg-green-500 text-white p-4 text-center">
         <p>&copy; 2024 Todo sobre Deporte</p>
+        <p>Síguenos en nuestras redes sociales</p>
+        <div class="flex justify-center space-x-4 mt-2">
+            <a href="#" class="hover:underline">Instagram</a>
+            <a href="#" class="hover:underline">Facebook</a>
+            <a href="#" class="hover:underline">Twitter</a>
+        </div>
     </footer>
 </body>
+</html>
 </html>

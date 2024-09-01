@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <link rel="icon" href="../images/imagen.ico" type="image/x-icon"> <!-- Aquí se coloca el ícono -->
@@ -6,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo sobre Deporte - Contacto</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
     <style>
         .ball {
             position: absolute;
@@ -36,28 +36,56 @@
             <li><a href="../index.html" class="text-green-700 hover:underline">Inicio</a></li>
             <li><a href="tematica.html" class="text-green-700 hover:underline">Temática</a></li>
             <li><a href="acercade.html" class="text-green-700 hover:underline">Acerca de</a></li>
-            <li><a href="contacto.html" class="text-green-700 hover:underline">Contacto</a></li>
-            <li><a href="media.html" class="text-green-700"> Imagenes y video</a></li>
+            <li><a href="contacto.html" class="text-green-700 font-bold">Contacto</a></li>
+            <li><a href="media.html" class="text-green-700 hover:underline"> Imágenes y videos</a></li>
         </ul>
+    </nav>
     </nav>
     <main class="flex justify-center p-4">
         <section class="mt-6 max-w-xl w-full bg-blue-100 rounded-lg shadow-md p-6">
             <h2 class="text-2xl font-semibold text-center">Contacto</h2>
-            <form id="contactForm">
+            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 max-w-md mx-auto">
                 <div class="mb-4">
-                    <label for="nombre" class="block text-sm font-bold mb-2">Nombre:</label>
-                    <input type="text" id="nombre" required class="border border-gray-300 p-2 w-full rounded">
+                    <label class="block text-gray-700 font-bold mb-2" for="name">
+                        Nombre
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Ingresa tu nombre" required>
                 </div>
                 <div class="mb-4">
-                    <label for="email" class="block text-sm font-bold mb-2">Email:</label>
-                    <input type="email" id="email" required class="border border-gray-300 p-2 w-full rounded">
+                    <label class="block text-gray-700 font-bold mb-2" for="email">
+                        Correo electrónico
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Ingresa tu correo electrónico" required>
                 </div>
                 <div class="mb-4">
-                    <label for="mensaje" class="block text-sm font-bold mb-2">Mensaje:</label>
-                    <textarea id="mensaje" rows="4" required class="border border-gray-300 p-2 w-full rounded"></textarea>
+                    <label class="block text-gray-700 font-bold mb-2" for="sport">
+                        Deporte
+                    </label>
+                    <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="sport" required>
+                        <option value="">Selecciona un deporte</option>
+                        <option value="football">Fútbol</option>
+                        <option value="tennis">Tenis</option>
+                        <option value="basketball">Baloncesto</option>
+                    </select>
                 </div>
-                <div class="mb-4 text-center">
-                    <button id="submitBtn" type="submit" class="shadow bg-green-500 text-white p-2 rounded hover:bg-green-600 transition">Enviar</button>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-bold mb-2" for="level">
+                        Nivel de experiencia
+                    </label>
+                    <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="level" required>
+                        <option value="">Selecciona tu nivel</option>
+                        <option value="beginner">Principiante</option>
+                        <option value="intermediate">Intermedio</option>
+                        <option value="advanced">Avanzado</option>
+                    </select>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" id="submitBtn">
+                        Registrarse
+                    </button>
+                    <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" id="cancelBtn">
+                        Cancelar
+                    </button>
                 </div>
             </form>
         </section>
@@ -68,9 +96,12 @@
 
     <script>
         document.getElementById('submitBtn').addEventListener('click', function (event) {
-            event.preventDefault(); // Evita el envío del formulario
             createBalls();
             clearForm(); // Limpiar los campos del formulario
+        });
+
+        document.getElementById('cancelBtn').addEventListener('click', function (event) {
+            clearForm(); // Limpiar los campos del formulario al cancelar
         });
 
         function createBalls() {
@@ -97,7 +128,7 @@
         }
 
         function clearForm() {
-            document.getElementById('contactForm').reset(); // Método para limpiar los campos del formulario
+            document.querySelector('.bg-white').reset(); // Método para limpiar los campos del formulario
         }
     </script>
 </body>
