@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <link rel="icon" href="images/imagen.ico" type="image/x-icon">
@@ -13,6 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css"> <!-- Ajustar ruta si es necesario -->
     <style>
+
         .ball {
             position: absolute;
             border-radius: 50%;
@@ -30,11 +30,12 @@
             }
         }
     </style>
+  
 </head>
 
 <body class="bg-gray-100">
     <header class="bg-green-500 text-white p-4 text-center">
-        <h1 class="text-3xl font-bold">Todo sobre Deporte/h1>
+        <h1 class="text-3xl font-bold">Todo sobre Deporte</h1>
         <h2 class="text-xl">Bienvenid@ a Inicio</h2>
     </header>
     <nav class="p-4 text-center bg-white shadow-md">
@@ -49,9 +50,28 @@
     </nav>
     <main class="p-4">
         <section>
-            <div class="bg-blue-300 p-6 rounded-lg mb-6 shadow-lg">
-                <h2 class="text-2xl font-bold">Bienvenido</h2>
-                <p class="text-lg">Descubre todo sobre los deportes, desde los más populares hasta los menos conocidos.</p>
+            <center>
+
+                <div class="bg-blue-300 p-6 rounded-lg mb-6 shadow-lg">
+                    <style>
+                        .marquee-container {
+                            width: 300px; /* Specific width */
+                            overflow: hidden; /* Hides overflow */
+                            margin: 0 auto; /* Centers the container */
+                        }
+
+                        marquee {
+                            width: 100%; /* Makes the marquee fill the container */
+                        }
+                    </style>
+                    </head>
+                    <body class="bg-gray-100 flex items-center justify-center h-screen">
+                        <div class="marquee-container">
+                            <marquee class="text-2xl font-bold">Bienvenido </marquee>
+                        </div>
+                        <p class="text-lg">Descubre todo sobre los deportes, desde los más populares hasta los menos conocidos.</p>
+                        <img src="images/imagen10.jpg" alt="Futbol, Tenis, Baloncesto" height="450" width=" 450">
+</center>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
